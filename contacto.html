@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dadaísmo: Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Bevan|Lato|Oswald:400,700" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="img/Logo 1.png" alt="Logo Dadaísta">
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Esto no es una home</a></li>
+                    <li><a href="historia.html">Dadaísmo (si es que existe)</a></li>
+                    <li><a href="artistas.html">Los culpables de todo esto</a></li>
+                    <li><a href="obras.html">Objetos que ya existian pero ahora son arte</a></li>
+                    <li><a href="poesia.html">Perdes el tiempo aca</a></li>
+                    <li class="current-page"><a href="contacto.html">Vos que pensas? (Aunque no importe)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img src="img/linea_irregular.png" alt="Línea divisoria irregular" class="header-line-image">
+    </header>
+
+    <main class="main-content contacto-page">
+        <section class="contacto-section">
+            <h1>Hablá con el absurdo</h1>
+            <h2>Mandanos tu collage de palabras. Prometemos leerlo.</h2>
+
+            <div class="contacto-grid">
+                <div class="form-container old-paper-card">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Tu alias dadaísta" required minlength="2">
+                            <div class="error-message" id="name-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="dada@ejemplo.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason">Motivo</label>
+                            <select id="reason" name="reason" required>
+                                <option value="">Elegí un motivo... o inventá uno.</option>
+                                <option value="consulta">Consulta</option>
+                                <option value="prensa">Prensa</option>
+                                <option value="colaboraciones">Colaboraciones</option>
+                                <option value="bug">Reportar bug</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <div class="error-message" id="reason-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Escribí tu collage de ideas en al menos 20 caracteres." required minlength="20"></textarea>
+                            <div class="error-message" id="message-error"></div>
+                        </div>
+
+                        <div class="form-group file-upload">
+                            <label for="attachment">Adjuntar archivo (opcional)</label>
+                            <input type="file" id="attachment" name="attachment" accept=".pdf,.jpg,.png">
+                            <div class="error-message" id="attachment-error"></div>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Mandame caos por correo (muy de vez en cuando).</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+                            <label for="privacy-consent">Acepto la <a href="/privacidad.html">política de privacidad</a> y el uso de mis datos para responder este contacto.</label>
+                            <div class="error-message" id="privacy-consent-error"></div>
+                        </div>
+
+                        <!-- Honeypot field -->
+                        <input type="text" name="honeypot" id="honeypot" style="display:none !important; opacity:0; position:absolute; left:-9999px;">
+
+                        <div class="form-actions">
+                            <button type="submit" id="submit-btn" class="btn-primary">ENVIAR</button>
+                            <button type="reset" id="clear-btn" class="btn-secondary">LIMPIAR</button>
+                        </div>
+
+                        <div class="form-status" id="form-status"></div>
+                    </form>
+                </div>
+
+                <div class="sidebar-contact">
+                    <div class="contact-card old-paper-card">
+                        <h3>Email Directo</h3>
+                        <p><a href="mailto:contacto@dadaismo.com" id="direct-email">contacto@dadaismo.com</a> <button class="copy-btn" data-email="contacto@dadaismo.com">Copiar</button></p>
+                    </div>
+
+                    <div class="contact-card old-paper-card">
+                        <h3>Redes Sociales</h3>
+                        <div class="social-icons-contact">
+                            <a href="#" aria-label="X"><img src="img/twitter.png" alt="X"></a>
+                            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+                            <a href="#" aria-label="YouTube"><img src="img/youtube.png" alt="YouTube"></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card old-paper-card">
+                        <h3>Descargas</h3>
+                        <p><a href="/presskit.pdf" target="_blank">Press Kit (PDF)</a></p>
+                        <p><a href="/manifiesto.pdf" target="_blank">Manifiesto (PDF)</a></p>
+                    </div>
+
+                    <div class="contact-card old-paper-card no-mapa">
+                        <h3>¿Dónde no estamos?</h3>
+                        <p>En todas partes y en ninguna. Si insistís, escribinos.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+   
+    <div class="contacto-cierre">
+        <p class="frase-cierre">Si llegaste hasta acá, ya sos parte del experimento.</p>
+        <a href="poesia.html" class="btn-primary btn-absurdo">Generar absurdo otra vez</a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="legal">
+            <p>&copy; 2025 Anti-derechos reservados. El contenido puede o no tener sentido.</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="X"><img src="img/twitter.png" alt="X"></a>
+            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#" aria-label="YouTube"><img src="img/youtube.png" alt="YouTube"></a>
+        </div>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+
+</body>
+</html>

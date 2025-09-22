@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dadaísmo: Perdes el tiempo aca</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Bevan|Lato|Oswald:400,700" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="img/Logo 1.png" alt="Logo Dadaísta">
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Esto no es una home</a></li>
+                    <li><a href="historia.html">Dadaísmo (si es que existe)</a></li>
+                    <li><a href="artistas.html">Los culpables de todo esto</a></li>
+                    <li><a href="obras.html">Objetos que ya existian pero ahora son arte</a></li>
+                    <li class="current-page"><a href="poesia.html">Perdes el tiempo aca</a></li>
+                    <li><a href="contacto.html">Vos que pensas? (Aunque no importe)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img src="img/linea_irregular.png" alt="Línea divisoria irregular" class="header-line-image">
+    </header>
+
+    <main class="main-content poesia-page">
+        <section class="poesia-section">
+            <h1>Perdés el tiempo acá</h1>
+            <h2>Porque nada tiene sentido, y eso está bien.</h2>
+
+            <div class="interactive-elements">
+                <!-- Random Phrase Generator -->
+                <div class="phrase-generator old-paper-card">
+                    <h3>Generador de Absurdo</h3>
+                    <p id="absurd-phrase">Haz clic para generar una frase dadaísta.</p>
+                    <button id="generate-phrase-btn">Generar absurdo</button>
+                </div>
+
+                <!-- Useless Button -->
+                <div class="useless-button-container">
+                    <button id="useless-btn" class="old-paper-card">NO TOCAR</button>
+                </div>
+            </div>
+
+            <!-- Interactive Collage -->
+            <div class="collage-container">
+                <img src="img/c1.png" alt="Bicicleta" class="collage-item" data-speed="2">
+                <img src="img/c2.png" alt="Ojo" class="collage-item" data-speed="1.5">
+                <img src="img/c3.png" alt="Fuente" class="collage-item" data-speed="2.5">
+                <img src="img/c4.png" alt="Mano" class="collage-item" data-speed="1.8">
+                <img src="img/c5.png" alt="Plancha" class="collage-item" data-speed="2.2">
+                <img src="img/c6.png" alt="Sombrero" class="collage-item" data-speed="1.6">
+                <img src="img/c7.png" alt="Reloj" class="collage-item" data-speed="2.1">
+                <img src="img/c8.png" alt="Pelota" class="collage-item" data-speed="1.4">
+                <span class="collage-item text-item" data-speed="1.7">DADA</span>
+                <span class="collage-item text-item" data-speed="2.3">ABSURDO</span>
+                <span class="collage-item text-item" data-speed="1.9">CAOS</span>
+            </div>
+
+            <div class="collage-controls">
+                <button id="reset-collage-btn" class="old-paper-card">Reiniciar</button>
+                <button id="shuffle-collage-btn" class="old-paper-card">Mezclar</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="legal">
+            <p>&copy; 2025 Anti-derechos reservados. El contenido puede o no tener sentido.</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="X"><img src="img/twitter.png" alt="X"></a>
+            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#" aria-label="YouTube"><img src="img/youtube.png" alt="YouTube"></a>
+        </div>
+    </footer>
+
+    <script src="js/poesia.js"></script>
+
+</body>
+</html>

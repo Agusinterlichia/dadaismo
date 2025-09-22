@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dadaísmo: Obras</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Bevan|Lato|Oswald:400,700" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="img/Logo 1.png" alt="Logo Dadaísta">
+            </div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Esto no es una home</a></li>
+                    <li><a href="historia.html">Dadaísmo (si es que existe)</a></li>
+                    <li><a href="artistas.html">Los culpables de todo esto</a></li>
+                    <li class="current-page"><a href="obras.html">Objetos que ya existian pero ahora son arte</a></li>
+                    <li><a href="poesia.html">Perdes el tiempo aca</a></li>
+                    <li><a href="contacto.html">Vos que pensas? (Aunque no importe)</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img src="img/linea_irregular.png" alt="Línea divisoria irregular" class="header-line-image">
+    </header>
+
+    <main class="main-content obras-page">
+        <section class="obras-section">
+            <h1>El arte que no quería ser arte</h1>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Todo</button>
+                <button class="filter-btn" data-filter="ready-mades">Ready-mades</button>
+                <button class="filter-btn" data-filter="collage">Collage y Fotomontaje</button>
+                <button class="filter-btn" data-filter="performance">Performance y Poesía</button>
+                <button class="filter-btn" data-filter="escultura">Azar y Escultura</button>
+            </div>
+
+            <div class="obras-grid">
+                <!-- Ready-mades -->
+                <div class="obra-card" data-category="ready-mades">
+                    <img src="img/Fountain.jpg" alt="Fountain">
+                    <div class="obra-info">
+                        <h3>Fountain</h3>
+                        <p>Marcel Duchamp, 1917</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Un urinario de porcelana que Duchamp compró y presentó como arte, cuestionando la autoría y la originalidad.</p>
+                    </div>
+                </div>
+                <div class="obra-card" data-category="ready-mades">
+                    <img src="img/Bycicle.jpg" alt="Bicycle Wheel">
+                    <div class="obra-info">
+                        <h3>Bicycle Wheel</h3>
+                        <p>Marcel Duchamp, 1913</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Una rueda de bicicleta montada sobre un taburete. Es considerado el primer "ready-made" de Duchamp.</p>
+                    </div>
+                </div>
+                <div class="obra-card" data-category="ready-mades">
+                    <img src="img/lhooq.jpg" alt="L.H.O.O.Q.">
+                    <div class="obra-info">
+                        <h3>L.H.O.O.Q.</h3>
+                        <p>Marcel Duchamp, 1919</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Una postal de la Mona Lisa con un bigote y una perilla dibujados, un acto de irreverencia iconoclasta.</p>
+                    </div>
+                </div>
+
+                <!-- Collage -->
+                <div class="obra-card" data-category="collage">
+                    <img src="img/cortecuchillo.jpg" alt="Corte con el cuchillo de cocina Dadá">
+                    <div class="obra-info">
+                        <h3>Corte con el cuchillo de cocina Dadá</h3>
+                        <p>Hannah Höch, 1919</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Un fotomontaje monumental que critica la cultura y política de la República de Weimar desde una perspectiva feminista.</p>
+                    </div>
+                </div>
+                <div class="obra-card" data-category="collage">
+                    <img src="img/satirico.jpg"Fotomontaje de John Heartfield">
+                    <div class="obra-info">
+                        <h3>Fotomontajes satíricos</h3>
+                        <p>John Heartfield</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Heartfield fue un maestro del fotomontaje político, usando sus obras como un arma de propaganda antifascista.</p>
+                    </div>
+                </div>
+
+                <!-- Performance -->
+                <div class="obra-card" data-category="performance">
+                    <img src="img/karawawe.jpg" alt="Karawane">
+                    <div class="obra-info">
+                        <h3>Karawane</h3>
+                        <p>Hugo Ball, 1916</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Un poema fonético sin sentido recitado por Hugo Ball vestido con un traje cubista, explorando el sonido sobre el significado.</p>
+                    </div>
+                </div>
+
+                <!-- Escultura -->
+                <div class="obra-card" data-category="escultura">
+                    <img src="img/collage.jpg" alt="Collage con cuadrados">
+                    <div class="obra-info">
+                        <h3>Collage con cuadrados...</h3>
+                        <p>Hans Arp, 1916</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Arp dejó caer papeles de colores sobre un lienzo, fijándolos donde caían para abrazar el azar como principio creativo.</p>
+                    </div>
+                </div>
+                <!-- Nuevas obras añadidas -->
+                <div class="obra-card" data-category="ready-mades">
+                    <img src="img/duchapmp.webp" alt="Bottle Rack" loading="lazy">
+                    <div class="obra-info">
+                        <h3>Bottle Rack</h3>
+                        <p>Marcel Duchamp, 1914</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Un escurridor de botellas comprado en una tienda, considerado uno de los primeros "ready-mades" puros.</p>
+                    </div>
+                </div>
+                <div class="obra-card" data-category="ready-mades">
+                    <img src="img/arm.webp" alt="In Advance of the Broken Arm" loading="lazy">
+                    <div class="obra-info">
+                        <h3>In Advance of the Broken Arm</h3>
+                        <p>Marcel Duchamp, 1915</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Una pala de nieve comprada en una ferretería de Nueva York, elevada a la categoría de arte por elección del artista.</p>
+                    </div>
+                </div>
+                <div class="obra-card" data-category="escultura">
+                    <img src="img/the spirit.jpg" alt="The Spirit of Our Time">
+                    <div class="obra-info">
+                        <h3>The Spirit of Our Time</h3>
+                        <p>Raoul Hausmann, c. 1920</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Una cabeza de maniquí con objetos mecánicos adheridos, que critica la idea de que el hombre moderno ha perdido su espíritu en favor de la máquina.</p>
+                    </div>
+                </div>
+                <div class="obra-card" data-category="ready-mades">
+                    <img src="img/cadeau.jpg" alt="Cadeau (Gift)" loading="lazy">
+                    <div class="obra-info">
+                        <h3>Cadeau (Gift)</h3>
+                        <p>Man Ray, 1921</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Una plancha con clavos pegados en su base, transformando un objeto doméstico en algo inútil y amenazante.</p>
+                    </div>
+                </div>
+                <div class="obra-card" data-category="ready-mades">
+                    <img src="img/God.jpg" alt="God" loading="lazy">
+                    <div class="obra-info">
+                        <h3>God</h3>
+                        <p>Elsa von Freytag-Loringhoven, 1917</p>
+                    </div>
+                    <div class="obra-overlay">
+                        <p>Una trampa de fontanería de hierro fundido montada sobre una caja de madera, considerada una crítica a la idolatría del arte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal/Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+   
+    <footer class="site-footer">
+        <div class="legal">
+            <p>&copy; 2025 Anti-derechos reservados. El contenido puede o no tener sentido.</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="X"><img src="img/twitter.png" alt="X"></a>
+            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#" aria-label="YouTube"><img src="img/youtube.png" alt="YouTube"></a>
+        </div>
+    </footer>
+
+    <script src="js/obras.js"></script>
+
+</body>
+</html>
