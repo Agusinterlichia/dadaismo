@@ -1192,21 +1192,126 @@ body.home-page {
 
 /* --- FIN FIX CIERRE CONTACTO --- */
 
-/* --- Estilos para Iconos Sociales en Página de Contacto --- */
+
+
+/* --- INICIO REDISEÑO CONTACTO DADAÍSTA --- */
+
+/* 1. Contenedor del formulario con borde irregular */
+.contacto-page .form-container {
+    background-color: #fdfbf5; /* Un blanco hueso, como papel viejo */
+    background-image: none; /* Quitar la imagen de placeholder */
+    border: 1px solid #ccc;
+    /* Un polígono más complejo para un efecto de recorte más dramático */
+    clip-path: polygon(0% 3%, 98% 0%, 100% 7%, 99% 97%, 85% 100%, 90% 95%, 2% 100%, 0% 95%, 5% 80%);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+}
+
+/* 2. Campos de texto con estilo creativo */
+.contacto-page .form-group input[type="text"],
+.contacto-page .form-group input[type="email"],
+.contacto-page .form-group textarea,
+.contacto-page .form-group select {
+    border: none;
+    border-bottom: 2px dashed #585858; /* Línea discontinua */
+    background-color: transparent; /* Fondo transparente */
+    font-family: 'Courier New', Courier, monospace; /* Tipografía experimental */
+    border-radius: 0; /* Sin bordes redondeados */
+}
+
+.contacto-page .form-group input::placeholder,
+.contacto-page .form-group textarea::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    color: #666;
+}
+
+/* 3. Botones grandes estilo vintage con hover rojo/negro */
+.contacto-page .btn-primary {
+    background-color: #000000; /* Fondo negro */
+    color: #FFFFFF; /* Texto blanco */
+    border: 3px outset #555555;
+    padding: 12px 28px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.contacto-page .btn-primary:hover {
+    background-color: red; /* Fondo rojo en hover */
+    color: #000000; /* Texto negro en hover */
+    border-style: inset;
+}
+
+/* 4. Iconos de redes sociales en footer de pág. contacto */
+.contacto-page .site-footer .social-icons {
+    gap: 2rem; /* Más espacio entre iconos */
+}
+
+.contacto-page .site-footer .social-icons a img {
+    width: 50px; /* Iconos más grandes */
+    height: 50px;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    filter: grayscale(1); /* Empezar en blanco y negro */
+}
+
+.contacto-page .site-footer .social-icons a:hover img {
+    transform: scale(1.25); /* Agrandar en hover */
+    filter: grayscale(0); /* Devolver el color en hover */
+}
+
+/* --- FIN REDISEÑO CONTACTO DADAÍSTA --- */
+/* --- INICIO REDISEÑO SIDEBAR CONTACTO --- */
+
+/* Estilo general para las tarjetas del sidebar */
+.sidebar-contact .contact-card {
+    background-color: #f0ede4; /* Otro tono de papel */
+    background-image: none;
+    border: 1px solid #aaa;
+    padding: 1.5rem;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-contact .contact-card:hover {
+    transform: rotate(1deg) scale(1.02);
+}
+
+.sidebar-contact .contact-card h3 {
+    color: #800020;
+}
+
+/* Formas irregulares y rotaciones distintas para cada tarjeta */
+.sidebar-contact .contact-card:nth-of-type(1) {
+    clip-path: polygon(0% 5%, 100% 0%, 95% 95%, 5% 100%);
+    transform: rotate(-1deg);
+}
+
+.sidebar-contact .contact-card:nth-of-type(2) {
+    clip-path: polygon(5% 0%, 98% 4%, 100% 100%, 0% 96%);
+    transform: rotate(0.5deg);
+}
+
+.sidebar-contact .contact-card:nth-of-type(3) {
+    clip-path: polygon(0% 0%, 100% 3%, 97% 95%, 3% 100%);
+    transform: rotate(-0.8deg);
+}
+
+/* Estilo para los iconos de redes en el sidebar de pág. contacto */
 .social-icons-contact {
     display: flex;
-    justify-content: flex-start; /* Alinea los íconos a la izquierda */
-    align-items: center;
-    gap: 1rem; /* Espacio entre los íconos */
-    margin-top: 1rem; /* Espacio sobre los íconos */
+    justify-content: center; /* Centrar los iconos en su tarjeta */
+    gap: 1.5rem;
 }
 
 .social-icons-contact a img {
-    max-width: 40px;
-    height: auto;
-    transition: opacity 0.3s ease;
+    width: 65px; /* Iconos más grandes */
+    height: auto; /* Altura automática para mantener la proporción */
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    filter: grayscale(0.5); /* Un poco de B/N para consistencia */
 }
 
 .social-icons-contact a:hover img {
-    opacity: 0.7;
+    transform: scale(1.2);
+    filter: grayscale(0);
 }
+
+/* --- FIN REDISEÑO SIDEBAR CONTACTO --- */
