@@ -1315,3 +1315,89 @@ body.home-page {
 }
 
 /* --- FIN REDISEÑO SIDEBAR CONTACTO --- */
+
+/* --- ESTILOS DEL BUSCADOR --- */
+.search-container {
+    position: relative;
+    align-self: center;
+    margin-left: 2rem;
+    transform: rotate(-1deg); /* Inclinación dadaísta */
+}
+
+#searchInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dashed #3B2F2F;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #3B2F2F;
+    padding: 0.3rem 0.5rem;
+    width: 200px;
+    transition: width 0.4s ease-in-out;
+}
+
+#searchInput:focus {
+    outline: none;
+    width: 250px; /* Se expande un poco al hacer foco */
+    border-bottom-color: #800020;
+}
+
+/* Animación para el placeholder */
+#searchInput::placeholder {
+    color: #3B2F2F;
+    opacity: 0.8;
+    font-style: italic;
+    animation: placeholder-dada 15s infinite;
+}
+
+@keyframes placeholder-dada {
+    0%, 100% { transform: translateX(0) rotate(0); }
+    25% { transform: translateX(-2px) rotate(-0.5deg); }
+    50% { transform: translateX(2px) rotate(0.5deg); }
+    75% { transform: translateX(-1px) rotate(0.2deg); }
+}
+
+.search-suggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background-color: #F2E9D8;
+    border: 1px solid #3B2F2F;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.search-suggestions a {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-family: 'Oswald', sans-serif;
+    color: #3B2F2F;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.search-suggestions a:hover,
+.search-suggestions a:focus {
+    background-color: rgba(59, 47, 47, 0.1);
+    outline: none;
+    text-decoration: underline;
+    transform: translateX(2px); /* Pequeño desplazamiento */
+}
+
+@media (max-width: 992px) {
+    .search-container {
+        margin-left: 0;
+        margin-top: 1rem; /* Espacio cuando el menú se apila */
+        width: 100%;
+    }
+    #searchInput, #searchInput:focus {
+        width: 100%;
+    }
+    .search-suggestions {
+        width: 100%;
+    }
+}
