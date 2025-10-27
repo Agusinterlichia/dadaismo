@@ -25,8 +25,10 @@
                 </ul>
             </nav>
             <div class="search-container">
-                <input type="search" id="searchInput" placeholder="Buscar algo (o nada)...">
-                <div class="search-suggestions"></div>
+                <form action="resultados_buscar.php" method="POST">
+                    <input type="search" id="searchInput" name="buscar" placeholder="Buscar algo (o nada)...">
+                    <div class="search-suggestions"></div>
+                </form>
             </div>
         </div>
         <img src="img/linea_irregular.png" alt="Línea divisoria irregular" class="header-line-image">

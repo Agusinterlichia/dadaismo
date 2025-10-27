@@ -24,9 +24,11 @@
                     <li><a href="contacto.html">Vos que pensas? (Aunque no importe)</a></li>
                 </ul>
             </nav>
-            <div class="search-container">
-                <input type="search" id="searchInput" placeholder="Buscar algo (o nada)...">
-                <div class="search-suggestions"></div>
+              <div class="search-container">
+                <form action="resultados_buscar.php" method="POST">
+                    <input type="search" id="searchInput" name="buscar" placeholder="Buscar algo (o nada)...">
+                    <div class="search-suggestions"></div>
+                </form>
             </div>
         </div>
         <img src="img/linea_irregular.png" alt="Línea divisoria irregular" class="header-line-image">
@@ -39,7 +41,7 @@
             <div class="artist-card">
                 <img src="img/Tzara.jpg" alt="Tristan Tzara">
                 <h3>Tristan Tzara (1896-1963)</h3>
-                <p>Poeta y ensayista rumano, considerado el fundador del Dadaísmo. Fue quien redactó los primeros Manifiestos Dada y organizó performances en el Cabaret Voltaire.</p>
+                <p>Poeta y ensayista rumano, considerado el fundador del Dadaísmo. Fue quien redactó los primeros Manifiestos Dada y organizó performances en el Cabaret Voltaire. </p>
                 <p><strong>Obra destacada:</strong> Manifiesto Dada (1918).</p>
                 <button class="leer-mas-btn">Leer más</button>
                 <div class="artist-details">
