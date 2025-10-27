@@ -24,10 +24,10 @@
                     <li><a href="contacto.html">Vos que pensas? (Aunque no importe)</a></li>
                 </ul>
             </nav>
-            <div class="search-container">
-                <form id="buscador" action="resultados_buscar.html" method="get" class="buscador">
-                    <input type="text" name="q" placeholder="Buscar artistas u obras…" required />
-                    <button type="submit">Buscar</button>
+              <div class="search-container">
+                <form action="resultados_buscar.php" method="POST">
+                    <input type="search" id="searchInput" name="buscar" placeholder="Buscar algo (o nada)...">
+                    <div class="search-suggestions"></div>
                 </form>
             </div>
         </div>
