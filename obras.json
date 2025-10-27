@@ -1,0 +1,16 @@
+[
+  {
+    "titulo": "Fuente",
+    "artista": "Marcel Duchamp",
+    "anio": 1917,
+    "descripcion": "La célebre ‘Fontaine’ firmada R. Mutt.",
+    "img": "img/fuente.jpg"
+  },
+  {
+    "titulo": "LHOOQ",
+    "artista": "Marcel Duchamp",
+    "anio": 1919,
+    "descripcion": "Intervención irónica sobre La Gioconda.",
+    "img": "img/lhooq.jpg"
+  }
+]
