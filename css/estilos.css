@@ -45,6 +45,11 @@ ul {
     flex-direction: column;
     padding: 0.5rem 2rem;
     background-color: #F2E9D8;
+    position: sticky;   /* se queda pegado cuando llegas a él */
+    top: 0;
+    z-index: 1000;      /* por encima del contenido */
+    background: #F2E9D8; /* color de fondo sólido (evita transparencia al hacer scroll) */
+    box-shadow: 0 2px 6px rgba(0,0,0,.08); /* opcional: sombrita */
 }
 
 .header-top {
@@ -90,6 +95,7 @@ ul {
     flex-direction: column;
     justify-content: flex-start;
     gap: 0;
+    padding-top: 120px; /* ajustá a la altura real del header */
 }
 
 .hero-image-container {
@@ -1314,8 +1320,6 @@ body.home-page {
     filter: grayscale(0);
 }
 
-/* --- FIN REDISEÑO SIDEBAR CONTACTO --- */
-
 /* --- ESTILOS DEL BUSCADOR --- */
 .search-container {
     position: relative;
@@ -1401,3 +1405,65 @@ body.home-page {
         width: 100%;
     }
 }
+
+/* === Leer más / despliegue con altura dinámica === */
+.artist-card { 
+  overflow: visible; /* nos aseguramos de no cortar el despliegue */
+}
+.artist-card .artist-details{
+  display: block;            /* que exista en flujo, no absolute ni none */
+  max-height: 0;             /* cerrado por defecto */
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .25s ease;
+  will-change: max-height;
+}
+.artist-details.is-open {
+  max-height: 1500px; /* ajustar según contenido */
+  opacity: 1;
+}
+
+/* --- Leer más / menos (versión simple, cero conflicto) --- */
+.artist-details { display: none; }
+.artist-card.is-open .artist-details { display: block; }
+
+/* === FIX LECTURA 'LEER MÁS' (override) === */
+.artist-card { overflow: visible !important; }
+
+.artist-details{
+  display: none !important;
+  opacity: 1 !important;          /* evita quedar transparente */
+  max-height: none !important;     /* evita quedar recortado */
+  visibility: visible !important;  /* por si quedó oculto */
+}
+
+.artist-card.is-open .artist-details{
+  display: block !important;
+  opacity: 1 !important;
+  max-height: none !important;
+}
+
+/* --- Header fijo arriba --- */
+.site-header{
+  position: sticky;   /* se queda pegado cuando llegas a él */
+  top: 0;
+  z-index: 1000;      /* por encima del contenido */
+  background: #F2E9D8; /* color de fondo sólido (evita transparencia al hacer scroll) */
+  box-shadow: 0 2px 6px rgba(0,0,0,.08); /* opcional: sombrita */
+}
+
+/* Si usas anclas (#id), esto evita que el header las tape */
+html { scroll-padding-top: 120px; } /* ajustá 120px a la altura real del header */
+
+/* --- Alternativa: si sticky no funciona (forzar fixed) ---
+.site-header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: #F2E9D8;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+.main-content{
+  padding-top: 120px; /* ajustá a la altura real del header */
+
+*/
