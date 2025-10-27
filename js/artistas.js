@@ -1,28 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const artistGrid = document.querySelector('.artist-grid');
+  // estado inicial
+  document.querySelectorAll('.artist-card').forEach(card => {
+    const btn = card.querySelector('.leer-mas-btn');
+    if (!btn) return;
+    card.classList.remove('is-open');
+    btn.setAttribute('aria-expanded','false');
+    btn.textContent = 'Leer más';
+  });
 
-    if (!artistGrid) return;
+  // delegación global
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.leer-mas-btn');
+    if (!btn) return;
+    const card = btn.closest('.artist-card');
+    if (!card) return;
 
-    artistGrid.addEventListener('click', (e) => {
-        const target = e.target;
+    const abierto = card.classList.contains('is-open');
 
-        // Check if a "Leer más" button was clicked
-        if (target.classList.contains('leer-mas-btn')) {
-            const currentCard = target.closest('.artist-card');
-            if (!currentCard) return;
-
-            const wasOpen = currentCard.classList.contains('is-open');
-
-            // Close all other cards first
-            document.querySelectorAll('.artist-card').forEach(card => {
-                card.classList.remove('is-open');
-            });
-
-            // If the clicked card was not already open, open it.
-            if (!wasOpen) {
-                currentCard.classList.add('is-open');
-            }
-            // If it was open, the loop above already closed it.
-        }
+    // cerrar otros
+    document.querySelectorAll('.artist-card.is-open').forEach(c => {
+      c.classList.remove('is-open');
+      const b = c.querySelector('.leer-mas-btn');
+      if (b) { b.textContent = 'Leer más'; b.setAttribute('aria-expanded','false'); }
     });
+
+    // abrir actual
+    if (!abierto) {
+      card.classList.add('is-open');
+      btn.textContent = 'Leer menos';
+      btn.setAttribute('aria-expanded','true');
+    }
+  });
 });

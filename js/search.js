@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
             suggestions[0].focus();
         } else if (e.key === 'Enter') {
             e.preventDefault();
-            if(suggestions.length > 0) {
-                window.location.href = suggestions[0].href;
+            if (searchInput.value.trim() !== '') {
+                window.location.href = `resultados_buscar.php?buscar=${encodeURIComponent(searchInput.value)}`;
             }
         }
     });
